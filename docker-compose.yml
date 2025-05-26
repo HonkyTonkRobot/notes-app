@@ -21,6 +21,17 @@ services:
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: password
     restart: on-failure
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/notesdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+    restart: on-failure
 
 volumes:
   db_data:
