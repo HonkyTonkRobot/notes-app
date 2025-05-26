@@ -1,35 +1,13 @@
-# Boilerplate: Fullstack with Sass
+### AI acknowledgement
 
-## Setup
+The backend has been successfully migrated from Node.js/Express to Spring Boot/Java, and a Docker Compose configuration has been set up for the application with a PostgreSQL database. The following steps were performed:
 
-### What's included
+1.  Created a Spring Boot application with Maven in the `springboot-server` directory.
+2.  Implemented API endpoints using Spring Boot controllers.
+3.  Configured the Spring Boot application to connect to the PostgreSQL database.
+4.  Removed the Node.js/Express backend files (`server/` directory and `package.json` file).
+5.  Created a Dockerfile for the Spring Boot application in the `springboot-server` directory.
+6.  Created a `docker-compose.yml` file in the root directory of the project to define the services (PostgreSQL database and Spring Boot application) and their dependencies.
+7.  Committed all changes to the Git repository with semantic commit messages.
 
-This repo includes:
-
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Vitest and testing library
-* configuration for server-side debugging in VS Code
-* configuration for preprocessing Sass
-
-### Installation
-
-#### **From the Github UI**
-
-See the instructions [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to use Github's feature to create a new repo from a template.
-
-#### **From the command line**
-
-```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
-npm install # to install dependencies
-npm run dev # to start the dev server
-```
-
-You can find the server running on [http://localhost:3000](http://localhost:3000) and the client running on [http://localhost:5173](http://localhost:5173).
-
----
-[Provide feedback on this repo](https://docs.google.com/forms/d/e/1FAIpQLSfw4FGdWkLwMLlUaNQ8FtP2CTJdGDUv6Xoxrh19zIrJSkvT4Q/viewform?usp=pp_url&entry.1958421517=boilerplate-fullstack)
+To run the application, navigate to the root directory of the project and run the command `docker-compose up`. This will start the PostgreSQL database and the Spring Boot application in Docker containers.
